@@ -4,6 +4,7 @@ syntax enable
 set clipboard=unnamed
 set noswapfile
 set scrolloff=8
+set cursorline
 
 " tab and space
 set softtabstop=2
@@ -37,10 +38,13 @@ colorscheme gruvbox
 
 "call plug#end()
 
+" ----------------  Keymapping  ----------------------------------------
+lua require('lua/keymaps')
+
 " ----------------  Plugins  ----------------------------------------
 
 "lua Packer插件管理
-lua require('plugins')
+lua require('lua/plugins')
 
 "Plugins config
 lua require('plugin-config/treesitter')
